@@ -25,6 +25,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <link rel="stylesheet" href="user/assets/css/fontawesome.css">
     <link rel="stylesheet" href="user/assets/css/templatemo-sixteen.css">
     <link rel="stylesheet" href="user/assets/css/owl.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
   </head>
 
@@ -67,6 +68,9 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li class="container-nav-item">
                 @if (Route::has('login'))
                     @auth
+                    <li class="nav-item">
+                <a class="nav-link" href="{{url('cartitems')}}"><i class="fa-solid fa-cart-shopping"></i>Cart[{{$count}}]</a>
+              </li>
                     <li>
                         <x-app-layout>
 

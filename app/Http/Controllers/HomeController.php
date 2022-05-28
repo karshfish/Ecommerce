@@ -18,8 +18,11 @@ class HomeController extends Controller
         }
         else
         {
+
             $data=product::paginate(3);
-        return view('user.UserHome', compact('data'));
+            $user=Auth()->user();
+            $count=cart::where('id',$user->id)->count();
+        return view('user.UserHome', compact('data','count'));
         }
     }
     public function index(){
@@ -60,5 +63,10 @@ class HomeController extends Controller
             return view('auth.login');
         }
 
+    }
+    public function cartitems(){
+        $user=Auth()->user();
+        $count=cart::where('id',$user->id)->count();
+        return view('user.cartitems', compact('count'));
     }
 }
