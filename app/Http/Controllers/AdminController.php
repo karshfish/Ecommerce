@@ -16,13 +16,16 @@ class AdminController extends Controller
         $image=$request->file;
         $imagename=time().'.'.$image->getClientOriginalExtension();
         $request->file->move('productimage',$imagename);
-        $data->image=$imagename;
+        $data->img=$imagename;
         $data->title=$request->title;
         $data->price=$request->price;
-        $data->description=$request->des;
+        $data->description=$request->description;
         $data->quantity=$request->quantity;
         $data->save();
-        return redirect()->back();
+        return redirect()->back()->with('message','Product Added Successfully');
+
+    }
+    public function uploadProductImage(Request $request){
 
     }
 }

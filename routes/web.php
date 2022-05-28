@@ -32,5 +32,6 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/contact', [HomeController::class, 'contact']);
 Route::get('/products', [HomeController::class, 'products']);
-Route::get('/Product', [AdminController::class, 'Product']);
-Route::post('/uploadProduct', [AdminController::class, 'uploadProduct']);
+Route::get('/Product', [AdminController::class, 'Product'])->name('product.upload');
+Route::post('uploadProduct', [AdminController::class, 'uploadProduct'])->name('upload.product.post');
+Route::post('addCart//{id}', [HomeController::class, 'addCart'])->name('add.Cart');

@@ -24,7 +24,7 @@
     <div class="container-fluid page-body-wrapper">  
       <div class="container" align="centre">     
         <h1 class="title">Add Product</h1>
-        <form  enctype="multipart/form-data" action="{{url('uploadProduct')}}"  methode="post">
+        <form action="{{route('upload.product.post')}}" method="POST" enctype="multipart/form-data"  >
         @csrf
         <div style="padding:15px">
           <label>Product title</label>

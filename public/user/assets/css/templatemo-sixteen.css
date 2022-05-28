@@ -60,7 +60,7 @@ ul.social-icons li a:hover {
 
 a.filled-button {
 	background-color: #f33f3f;
-	color: #fff;
+	color: #00FFFF;
 	font-size: 14px;
 	text-transform: capitalize;
 	font-weight: 300;
@@ -72,7 +72,7 @@ a.filled-button {
 
 a.filled-button:hover {
 	background-color: #121212;
-	color: #fff;
+	color: #00FFFF;
 }
 
 .section-heading {
@@ -875,7 +875,7 @@ footer .inner-content p a {
 
 .contact-form button.filled-button {
 	background-color: #f33f3f;
-	color: #fff;
+	color: #00FFFF;
 	font-size: 14px;
 	text-transform: capitalize;
 	font-weight: 300;
@@ -890,7 +890,7 @@ footer .inner-content p a {
 
 .contact-form button.filled-button:hover {
 	background-color: #121212;
-	color: #fff;
+	color: #00FFFF;
 }
 
 .accordion {
